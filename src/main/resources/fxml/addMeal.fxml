@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="279.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="travelFood.view.MainController">
+   <children>
+      <TableView fx:id="tableMealAddMealWindow" layoutX="14.0" layoutY="14.0" prefHeight="377.0" prefWidth="252.0">
+        <columns>
+          <TableColumn fx:id="mealNameAddMealWindow" prefWidth="148.0" text="Название еды" />
+          <TableColumn fx:id="mealCcalAddMealWindow" prefWidth="99.0" text="ккал" />
+        </columns>
+      </TableView>
+   </children>
+</Pane>

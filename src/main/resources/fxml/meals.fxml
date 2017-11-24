@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:id="mealPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="398.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="travelFood.view.MainController">
+   <children>
+      <TableView fx:id="tableMeals" editable="true" layoutX="36.0" layoutY="49.0" onMouseClicked="#clickMouseMealWindow" prefHeight="303.0" prefWidth="231.0">
+        <columns>
+          <TableColumn fx:id="colMealName" prefWidth="141.0" text="Еда" />
+          <TableColumn fx:id="colMealCcal" prefWidth="83.0" text="Каллории" />
+        </columns>
+      </TableView>
+      <Button fx:id="buttonNewMeal" layoutX="292.0" layoutY="281.0" mnemonicParsing="false" onAction="#openCreateMealWindow" prefHeight="71.0" prefWidth="81.0" text="Добавить новую еду" textAlignment="CENTER" wrapText="true" />
+      <Button fx:id="buttonDeleteMeal" layoutX="292.0" layoutY="162.0" mnemonicParsing="false" onAction="#handleDeleteMealButtonAction" prefHeight="32.0" prefWidth="81.0" text="Удалить" />
+   </children>
+</Pane>

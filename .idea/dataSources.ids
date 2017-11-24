@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="HSQLDB - TravelFoodDB" uuid="0e8bf325-4ce7-4501-848c-94c025c81fff">
+    <database-info product="HSQL Database Engine" version="2.3.2" jdbc-version="4.0" driver-name="HSQL Database Engine Driver" driver-version="2.3.2">
+      <identifier-quote-string>&quot;</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact"/>
+    <schema name="PUBLIC" catalog="PUBLIC"/>
+    <table name="DAYS" schema="PUBLIC" catalog="PUBLIC" type="TABLE">
+      <column name="ID" sqlType="INTEGER" precision="32" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="NAME" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="JOURNEY_ID" sqlType="INTEGER" precision="32" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="SYS_PK_10106" columns="ID"/>
+      <foreign-key name="SYS_FK_10109" columns="JOURNEY_ID" ref-table="JOURNEY" ref-schema="PUBLIC" ref-catalog="PUBLIC" ref-columns="ID" update-rule="3" delete-rule="0"/>
+      <exported-key name="SYS_FK_10122" table="MEALS_WITH_WEIGHT" schema="PUBLIC" catalog="PUBLIC" columns="DAY_ID"/>
+    </table>
+    <table name="JOURNEY" schema="PUBLIC" catalog="PUBLIC" type="TABLE">
+      <column name="ID" sqlType="INTEGER" precision="32" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="NAME" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="SYS_PK_10100" columns="ID"/>
+      <exported-key name="SYS_FK_10109" table="DAYS" schema="PUBLIC" catalog="PUBLIC" columns="JOURNEY_ID"/>
+    </table>
+    <table name="MEALS" schema="PUBLIC" catalog="PUBLIC" type="TABLE">
+      <column name="ID" sqlType="INTEGER" precision="32" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="NAME" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="CALORIES" sqlType="INTEGER" precision="32" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="SYS_PK_10092" columns="ID"/>
+      <exported-key name="SYS_FK_10123" table="MEALS_WITH_WEIGHT" schema="PUBLIC" catalog="PUBLIC" columns="MEAL_ID"/>
+    </table>
+    <table name="MEALS_WITH_WEIGHT" schema="PUBLIC" catalog="PUBLIC" type="TABLE">
+      <column name="ID" sqlType="INTEGER" precision="32" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="ID_TABLE" sqlType="INTEGER" precision="32" scale="0" nullable="false" jdbcType="4"/>
+      <column name="WEIGHT" sqlType="INTEGER" precision="32" scale="0" nullable="false" jdbcType="4"/>
+      <column name="DAY_ID" sqlType="INTEGER" precision="32" scale="0" nullable="false" jdbcType="4"/>
+      <column name="MEAL_ID" sqlType="INTEGER" precision="32" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="SYS_PK_10117" columns="ID"/>
+      <foreign-key name="SYS_FK_10122" columns="DAY_ID" ref-table="DAYS" ref-schema="PUBLIC" ref-catalog="PUBLIC" ref-columns="ID" update-rule="3" delete-rule="0"/>
+      <foreign-key name="SYS_FK_10123" columns="MEAL_ID" ref-table="MEALS" ref-schema="PUBLIC" ref-catalog="PUBLIC" ref-columns="ID" update-rule="3" delete-rule="0"/>
+    </table>
+  </data-source>
+</component>
