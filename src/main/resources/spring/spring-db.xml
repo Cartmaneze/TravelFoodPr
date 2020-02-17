@@ -21,12 +21,14 @@
     <bean id="dataSource"
           class="org.springframework.jdbc.datasource.DriverManagerDataSource"
           p:driverClassName="org.hsqldb.jdbcDriver"
-          p:url="${database.url}"
+          p:url="#{T(travelFood.view.Main).pathToDBFromJar}"
           p:username="${database.username}"
           p:password="${database.password}"/>
 
-    <!--доступ к базе для Idea/jar-->
+    <!--absolute path to db-->
     <!--p:url="${database.url}"-->
+
+    <!--relative path to db-->
     <!--p:url="#{T(travelFood.view.Main).pathToDBFromJar}"-->
 
 

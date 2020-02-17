@@ -28,7 +28,7 @@
     </properties>
 
     <build>
-        <finalName>dateutils</finalName>
+        <finalName>TravelFood</finalName>
         <plugins>
 
             <!-- download source code in Eclipse, best practice -->
