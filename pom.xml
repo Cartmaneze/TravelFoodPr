@@ -28,7 +28,7 @@
     </properties>
 
     <build>
-        <finalName>TravelFood</finalName>
+        <finalName>TravelFoodJar</finalName>
         <plugins>
 
             <!-- download source code in Eclipse, best practice -->

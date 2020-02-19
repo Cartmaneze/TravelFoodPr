@@ -13,7 +13,7 @@ public class Main {
     public static void main(String[] args) throws IOException {
         pathToDBFromJar = Main.class.getProtectionDomain().getCodeSource().getLocation().getPath();
         pathToDBFromJar = pathToDBFromJar.substring(1);
-        pathToDBFromJar = "jdbc:hsqldb:file:" + pathToDBFromJar.replace("classes/", "db/TravelFoodDB").replace("TravelFood.jar", "db/TravelFoodDB");
+        pathToDBFromJar = "jdbc:hsqldb:file:" + pathToDBFromJar.replace("classes/", "db/TravelFoodDB").replace("TravelFoodJar.jar", "db/TravelFoodDB");
         System.out.println("pathToDBFromJar - " + pathToDBFromJar);
         LauncherImpl.launchApplication(TFWindow.class, MyPreloader.class, args);
     }
