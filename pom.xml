@@ -23,7 +23,7 @@
         <postgresql.version>42.0.0</postgresql.version>
 
         <!-- Hibernate -->
-        <hibernate.version>5.2.9.Final</hibernate.version>
+        <hibernate.version>5.4.24.Final</hibernate.version>
         <hibernate-validator.version>5.4.1.Final</hibernate-validator.version>
     </properties>
 
